@@ -17,6 +17,6 @@ This is a vulnerable app that is used to demonstrate SQL injection attacks. The 
 
 ### Fixing the Vulnerability
 
-This app is vulnerable to SQL injection attacks. To fix the vulnerability, there are three ways, you can use any of them at branches: `fix1`, `fix2`, `fix3`.
+This app is vulnerable to SQL injection attacks. To fix the vulnerability, there are three ways, you can use any of them at branches: `Fix1`, `Fix2`, `Fix3`.
 
 **Note:** The app is intentionally vulnerable to demonstrate the SQL injection attack. Do not use this app in production. It is only for educational purposes.
