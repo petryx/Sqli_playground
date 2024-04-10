@@ -61,7 +61,12 @@ def edit_task(task_id):
         conn.commit()
         conn.close()
         return redirect(url_for('index'))
-        
+    try:
+        # Adding this line to prevent SQLi, cast the task_id to int
+        task_id_int = int(task_id)
+    except:
+        return 'Invalid task id'
+
     c.execute(f'SELECT * FROM tasks WHERE id = {task_id}')
     task = c.fetchone()
     conn.close()
