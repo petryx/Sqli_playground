@@ -50,7 +50,7 @@ def delete_task(task_id):
     conn.close()
     return redirect(url_for('index'))
 
-@app.route('/edit/<string:task_id>', methods=['GET', 'POST'])
+@app.route('/edit/<int:task_id>', methods=['GET', 'POST'])
 def edit_task(task_id):
     conn = sqlite3.connect('todo.db')
     c = conn.cursor()
