@@ -54,6 +54,7 @@ def delete_task(task_id):
 def edit_task(task_id):
     conn = sqlite3.connect('todo.db')
     c = conn.cursor()
+    print("TaskID",task_id)
         
     if request.method == 'POST':
         task = request.form['task']
@@ -62,7 +63,7 @@ def edit_task(task_id):
         conn.close()
         return redirect(url_for('index'))
         
-    c.execute(f'SELECT * FROM tasks WHERE id = {task_id}')
+    c.execute('SELECT * FROM tasks WHERE id = ?', (task_id,))
     task = c.fetchone()
     conn.close()
     return render_template('edit.html', task=task)
