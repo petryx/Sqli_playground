@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Task</title>
+</head>
+<body>
+    <h1>Edit Task</h1>
+    <form action="/edit/{{ task[0] }}" method="post">
+        <input type="text" name="task" value="{{ task[1] }}" required>
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>
